@@ -2,51 +2,90 @@
 <html> 
     <head> 
         <title>Survey-Form</title> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css"/> 
     </head> 
 
     <body> 
-        <h1 id="title">Career Shifters Survey</h1> 
-        <p id="description">We would like to know your career before shifting. Please fill up the form.</p> 
-        
-        <form> 
-        <fieldset> 
-            <label id="name-label"> Name: 
-                <input id="name" type="text" placeholder="Enter your Name" required/>
-            </label> 
-            <label id="email-label"> Email: 
-                <input id="email" type="email" placeholder="Enter your E-mail" required/>
-            </label> 
-            <label id="number-label" for="phone"> Contact Number:
-                <input id="number" type="tel" pattern="{09}[0-99][0-10000000]" placeholder="Enter your Number" required/> 
-            </label>
-            <label id="profession-label">What is your Profession?
-                <select id="dropdown"> 
-                    <option value="">Please select one</option> 
-                    <option value="1">Engineer</option> 
-                    <option value="2">Architect</option> 
-                    <option value="3">Accountant</option> 
-                    <option value="4">Psychology</option> 
-                    <option value="4">Management</option> 
-                    <option value="4">Others</option> 
-                </select> 
-            </label> 
-            <label> Would you recommend your <em>Profession</em> to others?</label> 
-                <label><input id="definitely" type="radio" name="recommend" class="inline" value="definitely" />Definitely</label> 
-                <label><input id="maybe" type="radio" name="recommend" class="inline" value="Maybe" />Maybe</label> 
-                <label><input id="Not Sure" type="radio" name="recommend" class="inline" value="Not sure" />Not Sure</label> 
-            <label> What is your reason for shifting? </label> 
-                <label><input id="No-Opportunity" type="checkbox" name="reason" value="No-Opportunity" class="inline"/>No Opportunity</label> 
-                <label><input id="Not-first-choice" type="checkbox" name="reason" value="Not-first-choice" class="inline"/>Not first choice</label> 
-                <label><input id="Can't-Excell" type="checkbox" name="reason" value="Can't-Excel" class="inline"/>Can't Excel</label> 
-                <label><input id="Low-Salary" type="checkbox" name="reason" value="Low-Salary" class="inline"/>Low Salary</label> 
-                <label><input id="Additional-Course" type="checkbox" name="reason" value="Additional-Course" class="inline"/>Additional Course</label> 
-                <label><input id="Others" type="checkbox" name="reason" value="Others" class="inline"/>Others</label> 
-            <label>Any comments for other shifters? 
-                    <textarea name="comments" rows="10" cols="65" placeholder="Enter your comment here..."></textarea> 
-                </label> 
-            </fieldset> 
-            <input id="submit" type="submit" value="submit" /> 
-        </form>
+
+        <div class="left-col">
+            <h1>Are you a career tech shifter?</h1>
+            <p>Take part of this SURVEY!</p>
+            <span>We want to know what you THINK!</span>
+        </div>
+
+        <div class="right-col">
+            <div class="form content">
+                <div class="input-wrapper">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="phone">Contact #</label>
+                    <input type="tel" pattern="{09}[0-99][0-10000000]" id="number" required>
+                </div>
+                <div class="input-wrapper">
+                    <label>What is your Profession?</label>
+                    <select id="dropdown"> 
+                        <option value="">Please select one</option> 
+                        <option value="1">Engineer</option> 
+                        <option value="2">Architect</option> 
+                        <option value="3">Accountant</option> 
+                        <option value="4">Psychology</option> 
+                        <option value="4">Management</option> 
+                        <option value="4">Others</option> 
+                    </select> 
+                </div>
+                <div class="inpu-wrapper">
+                    <label>Would you recommend your Profession to others?</label>
+                        <label>
+                            <input id="definitely" type="radio" name="recommend" class="inline" value="definitely"/>Definitely
+                        </label>
+                        <label>
+                            <input id="maybe" type="radio" name="recommend" class="inline" value="Maybe" />Maybe
+                        </label>
+                        <label>
+                            <input id="Not Sure" type="radio" name="recommend" class="inline" value="Not sure" />Not Sure
+                        </label>
+                </div>
+                <div class="inpu-wrapper">
+                    <label> What is your reason for shifting? </label> 
+                        <label>
+                            <input id="No-Opportunity" type="checkbox" name="reason" value="No-Opportunity" class="inline"/>No Opportunity
+                        </label> 
+                        <label>
+                            <input id="Not-first-choice" type="checkbox" name="reason" value="Not-first-choice" class="inline"/>Not first choice
+                        </label> 
+                        <label>
+                            <input id="Can't-Excell" type="checkbox" name="reason" value="Can't-Excel" class="inline"/>Can't Excel
+                        </label> 
+                        <label>
+                            <input id="Low-Salary" type="checkbox" name="reason" value="Low-Salary" class="inline"/>Low Salary
+                        </label> 
+                        <label>
+                            <input id="Additional-Course" type="checkbox" name="reason" value="Additional-Course" class="inline"/>Additional Course
+                        </label> 
+                        <label>
+                            <input id="Others" type="checkbox" name="reason" value="Others" class="inline"/>Others
+                        </label>   
+                </div>
+                <div class="inpu-wrapper">
+                    <label>Any comments for other shifters? 
+                        <textarea name="comments" rows="10" cols="65" placeholder="Enter your comment here..."></textarea> 
+                    </label> 
+                </div>
+                <div class="input-wrapper">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+
     </body> 
 </html> 
